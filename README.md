@@ -1,3 +1,11 @@
+# Test Task
+
 put needed for analysis files into directory "files" 
-open directory "testTask" on your computer
-type run.py and press enter
+
+Run the following commands in GitBash and press enter:
+
+    git clone https://github.com/ViktoriaR/testTask.git
+    cd testTask
+    python run.pycd
+
+Result of analysis will be in "result.json" file
