@@ -1,0 +1,99 @@
+{
+    "hasEnum": false,
+    "validation": [],
+    "name": "Transaction-810",
+    "minOccurs": "1",
+    "children": [
+        {
+            "hasEnum": false,
+            "validation": [],
+            "name": "Segment-BIG",
+            "minOccurs": "1",
+            "children": [
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG01",
+                    "minOccurs": "1",
+                    "children": [],
+                    "visible": true,
+                    "sourcing": {
+                        "hasEnum": false,
+                        "name": "InvoiceDate",
+                        "location": "Invoice/Header/InvoiceHeader/InvoiceDate"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Date expressed as CCYYMMDD where CC represents the first two digits of the calendar year ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 4
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "Date",
+                            "minOccurs": "1",
+                            "format": "CCyyMMdd",
+                            "minLength": "8",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "373",
+                            "EDIDataType": "DT",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "8",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 5
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 3
+                }
+            ],
+            "visible": true,
+            "attributes": [
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "minOccurs": "1",
+                    "text": "To indicate the beginning of an invoice transaction set and transmit identifying numbers and dates",
+                    "children": [],
+                    "visible": true,
+                    "attributes": [],
+                    "elementType": "documentation",
+                    "id": 2
+                }
+            ],
+            "elementType": "element",
+            "id": 1
+        }
+    ],
+    "visible": true,
+    "designMeta": {
+        "hiddenSchema": {
+            "source": true,
+            "version": "7.7",
+            "document": "Invoices",
+            "format": "RSX"
+        },
+        "viewedSchema": {
+            "source": false,
+            "version": "5010",
+            "document": "Transaction-810",
+            "format": "X12"
+        }
+    },
+    "attributes": [],
+    "elementType": "element",
+    "rootFormat": {
+        "dateFormat": "",
+        "timeFormat": ""
+    },
+    "id": 0
+}
