@@ -10,8 +10,10 @@ Run the following commands in GitBash and press enter:
 
 Result of analysis will be in "result.json" file
 
+
 **Running Tests**
 
 To run unit tests, use :
 
     pytest
+
