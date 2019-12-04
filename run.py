@@ -4,7 +4,8 @@ import os
 data_in_files = []
 elements = {}
 elements['elements with source'] = []
-
+directory = 'files'
+result_file_name = 'result.json'
 
 def parse_data(data_in_file):
     source = data_in_file.get('designMeta').get('hiddenSchema')
@@ -34,16 +35,18 @@ def add_element(element):
         elements['elements with source'].append(element)
 
 
-directory = 'files'
-for filename in os.listdir(directory):
-    if filename.endswith(".json"):
-        with open(os.path.join(directory, filename)) as json_file:
-            data_in_files.append(json.load(json_file))
+def main(directory, result_file_name):
+    for filename in os.listdir(directory):
+        if filename.endswith(".json"):
+            with open(os.path.join(directory, filename)) as json_file:
+                data_in_files.append(json.load(json_file))
+
+    for data_in_file in data_in_files:
+        parse_data(data_in_file)
+
+    with open(result_file_name, 'w') as result_file:
+        result_file.write(json.dumps(elements, indent=4 ))
 
 
-for data_in_file in data_in_files:
-    parse_data(data_in_file)
-
-with open('result.json', 'w') as result_file:
-    result_file.write(json.dumps(elements, indent=4 ))
-
+if __name__ == '__main__':
+    main(directory, result_file_name)

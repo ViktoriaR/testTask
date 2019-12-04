@@ -1,8 +1,8 @@
 import pytest
 import json
 import os
-from . import run
 from run import *
+import run
 
 file = os.path.join('test_files', 'El_Palacio_de_Hierro_RSX_7.7_Invoices_to_X12_5010_Transaction-810.json')
 

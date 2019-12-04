@@ -1,0 +1,18 @@
+{
+    "elements with source": [
+        {
+            "Source": "RSX_7.7_Invoices",
+            "Destination": "X12_4010_Transaction-810",
+            "ElementPath": "Segment-BIG/BIG01",
+            "SourcePath": "Invoice/Header/InvoiceHeader/InvoiceDate",
+            "Occurrence": 1
+        },
+        {
+            "Source": "RSX_7.7_Invoices",
+            "Destination": "X12_5010_Transaction-810",
+            "ElementPath": "Segment-BIG/BIG01",
+            "SourcePath": "Invoice/Header/InvoiceHeader/InvoiceDate",
+            "Occurrence": 2
+        }
+    ]
+}
